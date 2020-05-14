@@ -1,5 +1,5 @@
 <?php
 
-echo "<H1>Test Page >>><br> PHP-NGINX</H1>";
-echo "<H1> Git and Jenkins - good job </h1>";
+echo "<H1>CI/CD</H1>";
+echo "<H1>Git push</h1>";
 
