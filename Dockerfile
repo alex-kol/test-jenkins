@@ -58,16 +58,16 @@ RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
 ENV BASE_PATH=/var/www/html/laravelapp
 WORKDIR ${BASE_PATH}
 
-COPY package* ./
-RUN npm install
+# COPY package* ./
+# RUN npm install
 
-COPY composer* ./
-RUN composer install --optimize-autoloader
+# COPY composer* ./
+# RUN composer install --optimize-autoloader
 
-COPY ./ ./
-RUN rm -rf docker-entrypoint.sh && \
-    npm run production && \
-    chmod 777 /var/www/html/laravelapp/bootstrap
+# COPY ./ ./
+# RUN rm -rf docker-entrypoint.sh && \
+#     npm run production && \
+#     chmod 777 /var/www/html/laravelapp/bootstrap
 
 COPY docker-entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/docker-entrypoint.sh
